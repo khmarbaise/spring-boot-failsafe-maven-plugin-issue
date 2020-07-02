@@ -4,6 +4,6 @@ COPY . /workspace
 
 WORKDIR /workspace
 
-RUN mvn -B clean install
+RUN mvn -B -fn clean install -DskipTests
 
 CMD ["mvn", "verify"]
